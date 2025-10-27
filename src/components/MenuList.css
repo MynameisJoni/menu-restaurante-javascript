@@ -4,7 +4,6 @@
   padding: 2rem 1rem;
 }
 
-/* HEADER DEL MENÚ */
 .header-menu {
   text-align: center;
   margin-bottom: 3rem;
@@ -23,43 +22,8 @@
   font-weight: 500;
 }
 
-/* GRID DE MENÚ */
 .menu-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .contenedor-carta {
-    padding: 1.5rem 1rem;
-  }
-
-  .header-menu h2 {
-    font-size: 2rem;
-  }
-
-  .menu-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  .menu-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1025px) {
-  .menu-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (min-width: 1400px) {
-  .menu-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
 }

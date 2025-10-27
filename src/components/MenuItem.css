@@ -41,7 +41,7 @@
   color: #333;
   margin-bottom: 0.5rem;
   line-height: 1.3;
-  min-height: 2.6rem; /* Para que todas las tarjetas tengan la misma altura */
+  min-height: 2.6rem; 
 }
 
 .categoria{
