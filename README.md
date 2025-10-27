@@ -1,16 +1,28 @@
-# React + Vite
+# Carta Restaurante
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Captura-carta](./public/Captura_ejemplo.png)
 
-Currently, two official plugins are available:
+Proyecto sobre una carta de restaurante mediante conexión via API.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## API
+La conexción con la API facilitada en el enunciado se hace mediante el fichero **`api.js`**. 
 
-## React Compiler
+## Componentes empleados
+En el proyecto se un total de 2 componentes *(padre e hijo)* que se emplearán en **`App.jsx`**.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### MenuItem
+En este componente representa cada **'tarjeta'** de la carta correpondiente a cada plato. Simplemente se definen la imagen, descripción, categoría (por lo pronto única) y precio.
 
-## Expanding the ESLint configuration
+Este sería el componente **'hijo'** ya que será empleado en otro componente fuera de **`App.jsx`**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### MenuList
+En este componente vamos a iterar sobre cada producto que se encuentra en la API. Se compone de una cabecera y de un contador que 'mide' la longitud del json.
+
+Seguidamente recorremos ese json con un **'map'** y dentro de este se empleará el componente **'hijo'** (por lo que el componente de esta sección es el **'padre'**). El resultado sería una **'tarjeta'** con cada elemento recibido de la API. 
+
+## App.jsx
+Este es el fichero principal de la aplicación.
+
+En el llamamos a la API mediante useEffect. Con un **'map'** se define el nombre de cada variable para las claves del json. A continuación se configura el error y el spinner de carga.
+
+Una vez definida esta estructura se procede a construir el html clásico en dónde llamamos a las funciones de error/éxito y al componente **padre** anterior. 
