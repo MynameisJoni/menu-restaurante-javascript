@@ -1,47 +1,9 @@
-* {
-  margin-left: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #ffffff;
-}
-
-.contenedor {
-  min-height: 100vh;
-}
-
-.header {
-  background: linear-gradient(135deg, #dde367 0%, #4e61f1 100%);
-  color: white;
-  text-align: center;
-  padding: 2rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.header p {
-  font-size: 1.2rem;
-  opacity: 0.9;
-}
-
-.main {
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-
+/* Estilos para mensajes de error */
 .error {
   background-color: #fee;
   border: 2px solid #f88;
   border-radius: 8px;
-  padding: 2rem;
+  padding: 1.5rem;
   text-align: center;
   margin: 2rem auto;
   max-width: 500px;
@@ -49,5 +11,15 @@ body {
 
 .error p {
   color: #c33;
-  font-size: 1.2rem;
+  font-size: 1rem;
+}
+
+.spinner {
+  text-align: center;
+  padding: 2rem;
+}
+
+.spinner p {
+  margin-top: 1rem;
+  color: #666;
 }
